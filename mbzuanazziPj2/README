@@ -1,0 +1,43 @@
+TCP Server
+
+SCREENSHOTS OF THE COMMUNICATION BETWEEN CLIENT AND SERVER PROVIDED IN  PROJECT2-1OBSERVATIONS.doc
+
+Overview:
+This project implements a basic TCP client-server communication using the HTTP protocol. The client can request files from the server, and the server responds with the requested file's contents (if available) or appropriate error messages.
+
+Requirements:
+C++ compiler (supporting C++11 standard)
+Operating System: Linux/Unix (for POSIX socket API)
+
+Features:
+Client Request: The client can request files by providing the name of the HTTP server and the name of the file on the server.
+
+Server Response: The server responds to file requests with the requested file's contents (if available) or appropriate error messages.
+
+Usage:
+Compile the server program using the provided Makefile:
+            make
+Run the server executable:
+        ./tcp_server
+
+This starts the server, and it will begin listening for incoming connections on port 60001 by default.
+
+Client: Compile and run the client code, following the prompts to request files.
+Run the client executable:
+        ./tcp_client 127.0.0.1 60001 index.html
+
+        [ ./tcp_client <serveraddress> <port> <file> ]
+
+File Request: Follow the prompts to request files from the server by providing the name of the HTTP server and the file name.
+
+Access the server from a web browser:
+Open a web browser and navigate to 'http://localhost:60001/index.html' .
+The server will respond with a basic HTML page displaying a welcome message.
+
+Files:
+tcp_server.hpp: Header file containing the TCPServer class declaration.
+tcp_server.cpp: Source file containing the implementation of the TCPServer class.
+main.cpp: Source file containing the main function to run the server.
+tcp_client.cpp: Source file containing the implementation of the TCPClient. 
+index.html: Sample HTML file served by the server.
+makefile: Makefile for compiling the project.
