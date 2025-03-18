@@ -1,0 +1,29 @@
+TCP Server
+
+PLEASE READ PROJECT1OBSERVATIONS.doc
+
+Overview:
+The TCP Server project demonstrates the implementation of a simple HTTP server using TCP sockets in C++. The server listens on a specified port and responds to HTTP requests from clients. It serves HTML files and handles GET requests by sending appropriate responses.
+
+Requirements:
+C++ compiler (supporting C++11 standard)
+Operating System: Linux/Unix (for POSIX socket API)
+
+Usage:
+Compile the server program using the provided Makefile:
+            make
+Run the server executable:
+        ./tcp_server
+
+This starts the server, and it will begin listening for incoming connections on port 60001 by default.
+
+Access the server from a web browser:
+Open a web browser and navigate to 'http://localhost:60001/index.html' .
+The server will respond with a basic HTML page displaying a welcome message.
+
+Files:
+tcp_server.hpp: Header file containing the TCPServer class declaration.
+tcp_server.cpp: Source file containing the implementation of the TCPServer class.
+main.cpp: Source file containing the main function to run the server.
+index.html: Sample HTML file served by the server.
+makefile: Makefile for compiling the project.
